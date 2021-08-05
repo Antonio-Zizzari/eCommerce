@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Home</title>	
+	<SCRIPT LANGUAGE="Javascript">
+		function Controllo(){	
+			var username=document.modulo.utente.value;
+			var password=document.modulo.password.value;
+			if (username==0 || password==0){
+				alert("Inserisci tutti i dati!");
+				return false; 
+			}
+		return true;
+		}
+
+		</SCRIPT>		
+		<link rel="stylesheet" href="CssHome.css" type="text/css">
+	</head>
+
+	<body background="home1.png">
+		<div id="titolohome" align=center>Sito e-commerce</div>
+		<div id="lineahome"><font color="#4169e1">0</font></div>
+		<form name="modulo" action="http://localhost/controllologin.php" method="POST" align=center onsubmit="return Controllo();">
+		<div id="contenuto" align=center name="dive">
+		<b ><h1><font color="#4169e1">Accedi o Registrati!</font></h1></b>
+		
+		<p>
+		Utente:<p><input type="text" name="utente"/>
+		<p>
+		Password:<p> <input type="password" name="password"/>
+		<p>
+		<input type="submit" name="invio" value="Invia"/>
+		<input type="reset" name="annulla" value="Annulla"/>
+		<p>
+		<a title="Per accedere ai servizi devi essere prima registrato" href="http://localhost/registra.html">
+		Non sei registrato? Registrati!</a>
+		<p>
+		</div>
+	
+	</body>
+</html>

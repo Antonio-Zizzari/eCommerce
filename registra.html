@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Registrazione</title>
+	<SCRIPT LANGUAGE="Javascript">
+		function Controllo(){	
+			var nome=document.modulo.nome.value;
+			var cognome=document.modulo.cognome.value;
+			var indirizzo=document.modulo.indirizzo.value;
+			var numcard=document.modulo.numcard.value;
+			var username=document.modulo.username.value;
+			var password=document.modulo.password.value;
+			var password2=document.modulo.password2.value;
+			if (nome==0 || cognome==0 ||indirizzo==0 ||numcard==0 || username==0 || password==0 || password2==0){
+				alert("Inserisci tutti i dati!");
+				return false; 
+			}
+			if (password==password2){
+				return true;
+			}
+			else{
+				alert("Le password non coincidono!");
+				return false;
+			}
+			
+		return true;
+		}
+
+		</SCRIPT>		
+		<link rel="stylesheet" href="CssHome.css" type="text/css">
+	</head>
+	<body bgcolor="#00bfff">		
+		
+		<b><div id="titoloreg" align=center>Sign up</div></b></h1>		
+		<form name="modulo" action="http://localhost/controlloreg.php" method="POST" align=center onsubmit="return Controllo();">
+		<div id="registra" align=center><b><br><h3>Registrati!</b></h3>						
+		Nome:<br> <input type="text" name="nome"/>
+		<br>
+		Cognome: <br><input type="text" name="cognome"/>
+		<br>
+		Indirizzo:<br> <input type="text" name="indirizzo"/>
+		<br>	
+		Numero Carta Mastercard: <br><input type="text" name="numcard"/>
+		<br>
+		Username: <br><input type="text" name="username"/>
+		<br>
+		Password:<br> <input type="password" name="password"/>
+		<br>
+		Ripeti Password:<br> <input type="password" name="password2"/>
+		<p>
+		<input type="button" onclick="location.href='http://localhost/Home.html'" value="Login"/>
+		<input type="submit" name="invio" value="Registrati"/>
+		<input type="reset" name="annulla" value="Annulla"/>
+		
+		</div>
+		
+	</body>
+</html>
